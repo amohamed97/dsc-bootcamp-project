@@ -1,0 +1,97 @@
+/* General Style Start */
+body{
+    font-family: sans-serif;
+    color: #2f2f2f;
+    margin: 0;
+}
+
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+main{
+    min-height: 600px;
+    margin-top: 20px;
+}
+/* General Style End */
+
+
+
+/* Header Start */
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+}
+
+header{
+    text-align: center;
+}
+
+header a{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+/* Header End */
+
+
+
+/* Article Start */
+.article{
+    border: 1px solid lightgray;
+    padding: 16px;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.article-body{
+    color: #4f4f4f;
+}
+
+.article:hover{
+    box-shadow: 3px 3px 10px gray;
+}
+
+.a-title{
+    color: #2f2f2f;
+    text-decoration: none;
+}
+
+.a-title:hover{
+    color: dodgerblue;
+}
+
+.delete-article{
+    background-color: firebrick;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.add-article{
+    background-color: teal;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* Article End */
+
+
+
+/* Footer Start */
+footer{
+    background-color: #2f2f2f;
+    color: white;
+    padding: 5px;
+    margin-top: 30px;
+}
+/* Footer End */
