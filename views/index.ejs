@@ -11,13 +11,16 @@
             <% articles.forEach(function(article){ %>
             <div class="article">
                 <div class="article-title">
-                    <a class="a-title" href="#">
+                    <a class="a-title" href="/articles/<%= article.id %>">
                         <h2><%= article.title %></h2>
                     </a>
                 </div>
                 <hr>
                 <div class="article-body">
-                    <p><%= article.body %></p>
+                    <p><%= article.body.length > 100 ?
+                        article.body.substring(0,100) + '...' :
+                        article.body %>
+                    </p>
                 </div>
                 <br>
                 <div class="article-footer">

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/meta.ejs') %>
+
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <div class="container">
+            <h1>
+                <%= article.title %>
+            </h1>
+            <br>
+            <p>
+                <%= article.body %>
+            </p>
+            <br>
+            <a class="delete-article" href="#">Delete</a>
+        </div>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>
