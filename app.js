@@ -53,8 +53,16 @@ app.get('/articles/:articleId', (req, res) => {
     if(foundArticle){
         res.render('article', {article: foundArticle})
     }else{
-        res.send('Error')
+        res.status(404).end()
     }
+})
+
+app.get('/articles/delete/:articleId', (req, res) => {
+    let articleId = req.params.articleId;
+    articlesArr = articlesArr.filter(function(article){
+        return article.id !== Number(articleId)
+    })
+    res.redirect('/')
 })
 
 // Starting the server with port 3000

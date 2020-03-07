@@ -15,7 +15,8 @@
                 <%= article.body %>
             </p>
             <br>
-            <a class="delete-article" href="#">Delete</a>
+            <hr>
+            <a class="delete-article" href="/articles/delete/<%= article.id %>">Delete</a>
         </div>
     </main>
     <%- include('partials/footer.ejs') %>
