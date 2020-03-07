@@ -1,6 +1,7 @@
 body{
     font-family: sans-serif;
     color: #2f2f2f;
+    margin: 0;
 }
 
 header h1{
@@ -32,8 +33,25 @@ main{
     min-height: 600px;
 }
 
+.article{
+    border: 1px solid lightgray;
+    padding: 16px;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.article-body{
+    color: #4f4f4f;
+}
+
+.article:hover{
+    box-shadow: 3px 3px 10px gray;
+}
+
 footer{
     background-color: #2f2f2f;
     color: white;
     padding: 5px;
+    margin-top: 30px;
 }
