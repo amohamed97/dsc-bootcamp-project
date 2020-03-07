@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + '/static_files'));
+app.use(express.static(__dirname + "/static_files"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Data
@@ -23,7 +23,7 @@ let articlesArr = [
   }
 ];
 
-let nextID = 3
+let nextID = 3;
 
 // Routes
 app.get("/", (req, res) => {
@@ -42,28 +42,32 @@ app.post("/new", (req, res) => {
     body: submittedArticle.body
   });
   nextID++;
-  res.redirect('/');
+  res.redirect("/");
 });
 
-app.get('/articles/:articleId', (req, res) => {
-    let articleId = req.params.articleId;
-    let foundArticle = articlesArr.find(function(article){
-        return article.id === Number(articleId)
-    })
-    if(foundArticle){
-        res.render('article', {article: foundArticle})
-    }else{
-        res.status(404).end()
-    }
-})
+app.get("/articles/:articleId", (req, res) => {
+  let articleId = req.params.articleId;
+  let foundArticle = articlesArr.find(function(article) {
+    return article.id === Number(articleId);
+  });
+  if (foundArticle) {
+    res.render("article", { article: foundArticle });
+  } else {
+    res.status(404).end();
+  }
+});
 
-app.get('/articles/delete/:articleId', (req, res) => {
-    let articleId = req.params.articleId;
-    articlesArr = articlesArr.filter(function(article){
-        return article.id !== Number(articleId)
-    })
-    res.redirect('/')
-})
+app.get("/articles/delete/:articleId", (req, res) => {
+  let articleId = req.params.articleId;
+  articlesArr = articlesArr.filter(function(article) {
+    return article.id !== Number(articleId);
+  });
+  res.redirect("/");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
+});
 
 // Starting the server with port 3000
 app.listen(3000, () => {
