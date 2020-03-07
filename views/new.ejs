@@ -7,13 +7,13 @@
     <%- include('partials/header.ejs') %>
     <main>
         <div class="container">
-            <form action="#" style="text-align: center;">
+            <form action="/new" method="post" style="text-align: center;">
                 <fieldset style="padding: 20px;">
                     <legend>New Article</legend>
                     <label for="form-title">Title</label><br>
-                    <input type="text"  id="form-title"><br><br>
+                    <input type="text" name="title"  id="form-title"><br><br>
                     <label for="form-body">Body</label><br>
-                    <textarea id="form-body" cols="30" rows="10"></textarea><br><br>
+                    <textarea id="form-body" name="body" cols="30" rows="10"></textarea><br><br>
                     <input type="submit">
                 </fieldset>
             </form>
